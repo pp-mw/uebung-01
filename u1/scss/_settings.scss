@@ -46,7 +46,7 @@
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1440);
+$global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #2199e8,
@@ -58,10 +58,9 @@ $foundation-palette: (
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
-$black: #0a0a0a;
-$white: #fefefe;
-$blue: #29ABE2;
-$orange: #F39C12;
+$black: #000;
+$white: #fff;
+$green: #BECB00;
 $body-background: $white;
 $body-font-color: $black;
 $body-font-family: 'Roboto', sans-serif;

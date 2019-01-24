@@ -1,0 +1,34 @@
+//responsive Typografie
+@mixin fluidType($min-font, $max-font, $min-vw, $max-vw) {
+  font-size: calc(#{$min-font} + #{strip-unit($max-font - $min-font)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+}
+//Layout
+//Spalte mit Abstand(padding)
+@mixin col-gap($class-parent, $class-child, $col, $sum, $gab) {
+  .#{$class-parent} {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: rem-calc(-$gab);
+    margin-right: rem-calc(-$gab);
+
+    .#{$class-child} {
+      width: percentage($col / $sum);
+      padding-left: rem-calc($gab);
+      padding-right: rem-calc($gab);
+    }
+  }
+}
+
+//Spalte mit Abstand im Breakpoint
+@mixin col-gap-breakpoint($class-parent, $class-child, $col, $sum, $breakpoint) {
+  .#{$class-parent} {
+    margin-left: rem-calc(-$gab);
+    margin-right: rem-calc(-$gab);
+
+    .#{$class-child} {
+      width: percentage($col / $sum);
+      padding-left: rem-calc($gab);
+      padding-right: rem-calc($gab);
+    }
+  }
+}
